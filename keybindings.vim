@@ -1,6 +1,10 @@
+" Set leader key
+let mapleader = " "
+" nnoremap <Space> <Nop>
+
 " Remap the escape key
-inoremap jk <ESC>   " Remap Esc key
-inoremap kj <ESC>   " Remap Esc key
+inoremap jk <ESC>
+inoremap kj <ESC>
 
 " Resize windows
 nnoremap <M-j> :resize -2<CR>

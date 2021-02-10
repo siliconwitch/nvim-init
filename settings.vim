@@ -1,5 +1,3 @@
-let mapleader = " "
-
 syntax enable           " Enable syntax highlighting
 set encoding=utf-8      " Encoding displayed
 set fileencoding=utf-8  " Encoding written to file

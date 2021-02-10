@@ -4,6 +4,7 @@ let plug_path = stdpath('data')
 exec 'source' init_path . '/plugins.vim'
 exec 'source' init_path . '/settings.vim'
 exec 'source' init_path . '/keybindings.vim'
+" exec 'source' init_path . '/which-key.vim'
 
 " Set Theme
 colorscheme molokai
