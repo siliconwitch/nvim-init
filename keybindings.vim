@@ -34,3 +34,4 @@ inoremap <D-q> :wq<CR>
 vnoremap < <gv
 vnoremap > >gv
 
+nmap <space>e :CocCommand explorer<CR>

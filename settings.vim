@@ -9,6 +9,7 @@ set hidden              " Keep multiple buffers open
 set splitbelow          " Always split new window below
 set splitright          " Always split new window right
 set t_Co=256            " Support 256 colours
+set termguicolors       " Fixes colours that tmux breaks
 set tabstop=4           " Tabs are 4 spaces
 set softtabstop=4       " How much the cursor moves with TAB & BS
 set shiftwidth=4        " How much to indent
@@ -29,9 +30,24 @@ set undofile            " Use undofile
 set scrolloff=8         " Scroll padding of 8 lines
 set signcolumn=yes      " Editor column limit bar 
 set colorcolumn=80      " Size of column limit marker
+set nowrap              " Don't wrap text
 
 " Colour of the right hand column limit bar
-highlight ColorColumn ctermbg=0 
+highlight ColorColumn ctermbg=0
 
-"Autosource the vimrc after saving
-au! BufWritePost $MYVIMRC source %
+" Set Theme
+colorscheme molokai
+
+" 256 colour support
+let g:rehash256 = 1
+
+" Git info in airblade
+let g:lightline = {
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
+      \ }
